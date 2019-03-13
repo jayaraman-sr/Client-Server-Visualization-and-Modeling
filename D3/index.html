@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <title>Client Server visualization: Sriram</title>
+  </head>
+  <body>
+        <label><input type="radio" name="scaler_option">Standard Scaler</label>
+        <label><input type="radio" name="scaler_option">MinMax Scaler</label>
+         
+	<br><br>
+               
+        <label for="c">C : </label>
+        <input id="c_value">
+             
+        <br><br>
+        <input type="button" onclick="plot();" value="Plot ROC curve"></input>
+               
+        <div class="graph"/>
+  </body>
+</html>
