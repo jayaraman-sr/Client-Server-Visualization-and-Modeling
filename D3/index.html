@@ -3,21 +3,35 @@
   <head>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="scripts/main.js"></script>
+    
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		
+    
     <title>Client Server visualization: Sriram</title>
   </head>
   <body>
-        <label><input type="radio" name="scaler_option">Standard Scaler</label>
-        <label><input type="radio" name="scaler_option">MinMax Scaler</label>
-         
-	<br><br>
-               
+	<h2 align="center">ROC curve</h2>
+
+	<div class="form-group col-6">
+        &nbsp;&nbsp;<label><input type="radio" name="scaler_option" value = "StandardScaler" checked="checked">Standard Scaler</label>&nbsp;&nbsp;
+        &nbsp;&nbsp;<label><input type="radio" name="scaler_option" value = "MinMaxScaler">MinMax Scaler</label>
+         </div>
+	<div class="form-group col-6">
+          &nbsp;&nbsp;     
         <label for="c">C : </label>
-        <input id="c_value">
-             
-        <br><br>
-        <input type="button" onclick="plot();" value="Plot ROC curve"></input>
+        <input id="c_value" value="1.0">
+        </div>     
+       
+        &nbsp;&nbsp;<input type="button" onclick="plotGraph();" value="Plot ROC curve"></input>
                
         <div class="graph"/>
+	<script src="scripts/main.js"></script>
+
+	<div class="col-md-6">
+		<div class="col-md-3"></div>
+		<div class="col-md-3"><svg></svg></div>
+	</div>
+
   </body>
 </html>
